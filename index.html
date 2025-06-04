@@ -1,103 +1,94 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TREGO — Bientôt Disponible</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --blue: #3498db;
-      --dark-blue: #1f70cc;
-      --white: #ffffff;
-    }
+import React from "react";
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+export default function App() {
+  return (
+    <div className="min-h-screen w-full bg-[#3498db] text-white font-sans overflow-x-hidden">
+      {/* Navbar */}
+      <header className="w-full flex items-center justify-between px-6 py-4 bg-[#1f70cc] shadow-md">
+        <h1 className="text-2xl font-bold">Trego</h1>
+        <a
+          href="https://trego.app/download"
+          className="bg-white text-[#3498db] font-semibold px-6 py-2 rounded-full shadow hover:bg-gray-100 transition"
+        >
+          Télécharger l'application
+        </a>
+      </header>
 
-    body {
-      background-color: var(--blue);
-      color: var(--white);
-      font-family: 'Inter', sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height: 100vh;
-      padding: 2rem;
-    }
+      {/* Hero Section */}
+      <section className="flex flex-col items-center justify-center text-center px-6 py-20 md:py-32">
+        <h2 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
+          Louer intelligemment, simplement, <span className="text-white">sûrement</span>
+        </h2>
+        <p className="text-lg md:text-xl text-white/80 max-w-2xl mb-10">
+          Trego est l'application guinéenne qui révolutionne la location de maisons et de voitures. Que ce soit pour un jour ou plusieurs mois, trouvez ce qu’il vous faut en toute confiance.
+        </p>
+        <a
+          href="https://trego.app/download"
+          className="bg-white text-[#3498db] font-semibold px-10 py-4 rounded-full shadow-lg hover:bg-gray-200 transition mb-10"
+        >
+          Télécharger maintenant
+        </a>
+        <img
+          src="/mockup-phone.png"
+          alt="Mockup de l'application Trego"
+          className="w-full max-w-md rounded-2xl shadow-xl"
+        />
+      </section>
 
-    h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
+      {/* Features */}
+      <section className="bg-white text-[#3498db] px-6 py-20">
+        <div className="max-w-6xl mx-auto text-center">
+          <h3 className="text-3xl md:text-4xl font-bold mb-12">Pourquoi choisir Trego ?</h3>
+          <div className="grid md:grid-cols-3 gap-10 text-left">
+            <div>
+              <h4 className="text-xl font-semibold mb-2">🏠 Locations variées</h4>
+              <p>Maisons, appartements, bureaux, motels… Louez ce dont vous avez besoin en quelques clics.</p>
+            </div>
+            <div>
+              <h4 className="text-xl font-semibold mb-2">🚗 Voitures à portée de main</h4>
+              <p>Accédez à une large gamme de voitures disponibles à la location, pour tous les budgets.</p>
+            </div>
+            <div>
+              <h4 className="text-xl font-semibold mb-2">📱 100% mobile</h4>
+              <p>Une interface intuitive, des notifications utiles, et une redirection directe vers WhatsApp pour contacter les loueurs.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    p {
-      font-size: 1.3rem;
-      margin-bottom: 2rem;
-      max-width: 600px;
-    }
+      {/* Testimonials */}
+      <section className="bg-[#1f70cc] text-white px-6 py-20">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-3xl font-bold mb-10">Ce que disent nos utilisateurs</h3>
+          <div className="grid gap-8 md:grid-cols-2">
+            <div className="bg-[#3498db] rounded-xl p-6 shadow-md">
+              <p>“Trego m’a permis de trouver une maison en moins de 24h. Incroyable !”</p>
+              <span className="block mt-4 font-semibold">Fatou, Conakry</span>
+            </div>
+            <div className="bg-[#3498db] rounded-xl p-6 shadow-md">
+              <p>“Une app facile à utiliser et un service très pratique. Bravo !”</p>
+              <span className="block mt-4 font-semibold">Mamadou, Labé</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    .logo {
-      width: 120px;
-      height: auto;
-      margin-bottom: 2rem;
-    }
+      {/* Call to Action */}
+      <section className="px-6 py-20 text-center bg-white text-[#3498db]">
+        <h3 className="text-3xl font-bold mb-6">Téléchargez Trego aujourd’hui</h3>
+        <p className="text-lg mb-8">Rejoignez des milliers d’utilisateurs qui louent plus simplement grâce à Trego.</p>
+        <a
+          href="https://trego.app/download"
+          className="bg-[#3498db] text-white font-semibold px-10 py-4 rounded-full shadow-lg hover:bg-[#1f70cc] transition"
+        >
+          Télécharger l'application
+        </a>
+      </section>
 
-    .button {
-      background-color: var(--white);
-      color: var(--blue);
-      padding: 1rem 2rem;
-      font-size: 1.1rem;
-      border: none;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .button:hover {
-      background-color: var(--dark-blue);
-      color: var(--white);
-      transform: scale(1.05);
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-      .button {
-        width: 100%;
-        padding: 0.8rem;
-        font-size: 1rem;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Optional Logo -->
-  <img src="https://trego.app/logo.png" alt="Trego Logo" class="logo" />
-
-  <h1>TREGO arrive bientôt</h1>
-  <p>
-    Louez des maisons, motels et voitures en toute simplicité. Disponible en Guinée dès le 22 juillet 2025.
-  </p>
-
-  <a class="button" href="https://trego.app/download" target="_blank">
-    Télécharger l'application
-  </a>
-
-</body>
-</html>
+      {/* Footer */}
+      <footer className="bg-[#1f70cc] text-white py-6 text-center">
+        <p>© {new Date().getFullYear()} Trego. Tous droits réservés.</p>
+      </footer>
+    </div>
+  );
+}
