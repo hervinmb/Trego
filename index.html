@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TREGO - Location de biens en Guinée</title>
+  <title>TREGO - Location en Guinée</title>
   <style>
     :root {
-      --trego-blue: #3498db;
+      --blue: #3498db;
       --white: #ffffff;
+      --light: #ecf6ff;
     }
 
     * {
@@ -18,119 +19,130 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--trego-blue);
-      color: var(--white);
-      line-height: 1.6;
+      background-color: var(--white);
+      color: #333;
     }
 
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 40px 20px;
+    header {
+      background: var(--blue);
+      color: var(--white);
       text-align: center;
+      padding: 60px 20px 40px;
     }
 
     header img {
-      width: 120px;
+      width: 100px;
       margin-bottom: 20px;
     }
 
-    h1 {
-      font-size: 2.8rem;
+    header h1 {
+      font-size: 2.5rem;
       margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      background: var(--white);
+      color: var(--blue);
+      padding: 14px 30px;
+      border-radius: 30px;
+      text-decoration: none;
       font-weight: bold;
+      display: inline-block;
+      transition: background 0.3s ease;
     }
 
-    h2 {
-      font-size: 1.8rem;
-      margin-top: 40px;
-      margin-bottom: 15px;
+    .btn:hover {
+      background: #f4f4f4;
     }
 
-    p {
-      font-size: 1.1rem;
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2rem;
       margin-bottom: 20px;
+      color: var(--blue);
     }
 
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      margin-top: 30px;
-      text-align: left;
+    section p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
     }
 
     .feature {
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 20px;
-      border-radius: 15px;
+      margin-bottom: 50px;
     }
 
-    .download-btn {
-      display: inline-block;
-      margin-top: 30px;
-      background-color: var(--white);
-      color: var(--trego-blue);
-      padding: 14px 30px;
-      border-radius: 40px;
-      font-weight: bold;
-      font-size: 1rem;
-      text-decoration: none;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      transition: background-color 0.3s ease;
-    }
-
-    .download-btn:hover {
-      background-color: #2980b9;
-      color: var(--white);
+    .feature img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-top: 20px;
     }
 
     footer {
-      margin-top: 60px;
+      background: #f0f0f0;
+      color: #777;
+      text-align: center;
+      padding: 30px 20px;
       font-size: 0.9rem;
-      opacity: 0.7;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      section h2 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <header>
-      <!-- Replace with your actual logo -->
-      <img src="trego-logo.png" alt="Logo Trego" />
-      <h1>TREGO</h1>
-      <p>La solution digitale simple et sécurisée pour louer des maisons, appartements et véhicules en Guinée.</p>
-    </header>
+  <header>
+    <img src="trego-logo.png" alt="Trego Logo" />
+    <h1>TREGO</h1>
+    <p>La solution mobile la plus simple et sécurisée pour louer maisons, appartements et voitures en Guinée.</p>
+    <a href="https://link-to-your-app.com" class="btn">📲 Télécharger l'app</a>
+  </header>
 
-    <h2>Notre vision</h2>
-    <p>Faciliter l'accès au logement et à la mobilité grâce à une plateforme 100% mobile, fiable et intuitive.</p>
-
-    <h2>Fonctionnalités clés</h2>
-    <div class="features">
-      <div class="feature">
-        <h3>Hébergements</h3>
-        <p>Trouvez maisons, hôtels, motels et appartements pour un court ou long séjour.</p>
-      </div>
-      <div class="feature">
-        <h3>Locations immobilières</h3>
-        <p>Louez des locaux commerciaux, bureaux ou espaces de coworking facilement.</p>
-      </div>
-      <div class="feature">
-        <h3>Location de véhicules</h3>
-        <p>Accédez à une large gamme de voitures à louer selon vos besoins et votre budget.</p>
-      </div>
-      <div class="feature">
-        <h3>Communication rapide</h3>
-        <p>Contactez les propriétaires directement via WhatsApp grâce à un bouton intégré.</p>
-      </div>
+  <section>
+    <div class="feature">
+      <h2>🏠 Trouvez votre hébergement idéal</h2>
+      <p>Explorez une grande variété de maisons, hôtels, motels et appartements à louer, pour tous les budgets et besoins.</p>
+      <img src="home.jpg" alt="Hébergement Trego" />
     </div>
 
-    <a href="https://link-to-your-app.com" class="download-btn" target="_blank">Télécharger l'application</a>
+    <div class="feature">
+      <h2>🚗 Louez un véhicule facilement</h2>
+      <p>Besoin d'une voiture pour un week-end, un voyage ou une occasion spéciale ? TREGO vous connecte aux meilleures offres en Guinée.</p>
+      <img src="car.jpg" alt="Voiture à louer" />
+    </div>
 
-    <footer>
-      <p>&copy; 2025 TREGO - Tous droits réservés.</p>
-    </footer>
-  </div>
+    <div class="feature">
+      <h2>💬 Contactez les loueurs directement</h2>
+      <p>Un bouton WhatsApp intégré permet de parler instantanément avec les propriétaires, pour plus de confiance et de rapidité.</p>
+      <img src="whatsapp.png" alt="Discussion WhatsApp" />
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 TREGO. Tous droits réservés.
+  </footer>
 
 </body>
 </html>
